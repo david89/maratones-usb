@@ -1,0 +1,58 @@
+Mr. Yover Galarga is the owner of two chocolate factories (two of the biggest
+chocolate factories in the world). One day he was thinking about life and stuff
+and came up with the following problem and he is asking for your help.
+
+Each factory sells chocolate boxes of size 1 x N. Also, you have M different
+types of chocolate and infinite amounts of each type. The size of the ith type
+of chocolate is 1 x Li. Now, Mr. Yover is wondering in how many ways you can
+fill the box of chocolate. One way is different than the other if the number of
+chocolates used in the process, is different; the number of chocolates of some
+type is different or if the position of the chocolates are different. For more
+information, please go to the test cases explanation.
+
+Each factory has certain restrictions you should know:
+* First factory restrictions:
+ - The maximum size of the chocolate box is 10 ** 9.
+ - They have 0 < M <= 20 different types of chocolates.
+ - The size of each type of chocolate is 0 < Li <= 20.
+* Second factory restrictions:
+ - The maximum size of the chocolate box is 10 ** 3.
+ - They have 0 < M <= 10 ** 3 different types of chocolates.
+ - The size of each type of chocolate is 0 < Li <= 10 ** 3.
+
+Input format:
+You have to solve T test cases, where each test case consists of the following:
+the first line contains 2 number, N (the size of the chocolate box) and M (the
+number of different types of chocolate). After that, one line follows with M
+space-separated integers L1 L2 ... LM (the sizes of the types of chocolates).
+
+Output format:
+Output one single line with the number of ways to fill the box of chocolates
+with the M types of chocolates at your disposal. The answer may be very big,
+so we are interested in the result modulo 10 ** 9 + 7.
+
+Input test case:
+4
+4 3
+1 2 3
+1000 2
+250 750
+1000000 1
+3
+10000 2
+1 2
+
+Output test case:
+Case #1: 7
+Case #2: 3
+Case #3: 0
+Case #4: 24223428
+
+Explanation of the first test case:
+| 1 | 1 | 1 | 1 |
+| 1 | 1 | 2 |
+| 1 | 2 | 1 |
+| 2 | 1 | 1 |
+| 2 | 2 |
+| 1 | 3 |
+| 3 | 1 |
