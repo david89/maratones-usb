@@ -1,0 +1,52 @@
+Buy Or Not:
+===========
+
+You are just about to buy a brand new television and want to take it inside
+your house so you can install it in your living room and relax watching
+Adventure Time. However you are unsure if you could pass the television through
+the corridors of your house all the way to your living room.
+
+You are a ver rich person an live in a big house with a lot of corridors. Each
+corridor has a certain width. You can asume that the lenght and height are big
+enough for any television to fit inside. Each corridor is connected to the
+next with a 90° angle (either positive or negative) and the corridors do not
+collapse into a circuit.
+
+Given the widths of consecutive corridors and the width of television you are
+about to buy, you should decide if the television fits through the corridors or
+not. If it fist, you should buy it. If it doesn't fit, there is really no point
+buying it.
+
+Input:
+------
+
+The input will start with a number T, the number of taste cases (1 <= T <= 100).
+
+Each test case will begin with a line containing a number C (1 <= C <= 20), the
+number of corridors to consider. The next line contains C numbers C_i
+(1 <= C_i <= 100), the width of each corridor. Finally, the next line contains a
+number W (1 <= W <= 300), the width of the television you are considering buying.
+
+Output:
+-------
+
+For each test case output "I'll Buy it!" if the television fits through the corridor
+and "Bah! Didn't even want it!" is it doesn't. You should use 1e-3 precision when
+making comparisons.
+
+Example Input:
+--------------
+
+2
+2
+27 64
+125
+3
+64 27 64
+126
+
+Example Output:
+---------------
+
+I'll buy it!
+Bah! Didn't even want it!
