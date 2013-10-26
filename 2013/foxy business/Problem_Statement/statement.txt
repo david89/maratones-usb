@@ -1,0 +1,56 @@
+Foxy Business:
+==============
+
+Dog goes woof,
+Cat goes meow,
+Bird goes tweet
+and mouse goes squeek.
+
+Cow goes moo,
+Frog goes croak
+and the elephant goes toot.
+
+Ducks say quack,
+and fish go blub
+and the seal goes ow ow ow.
+
+But theres one sound
+that no one knows.
+What does the fox say?
+
+Input:
+------
+
+The input will contain sereval test cases.
+
+Each test case will contain several lines of the form: "The X goes Y" (without
+quotes), where X and Y are non-empty strings of lower-case letters, possibly
+with spaces.
+
+Each test case will end with the a line that has only "What does the fox say?"
+(without quotes).
+
+Output:
+-------
+
+For each test case output Y if a line a of the form "The fox goes Y" (without
+quotes) is part of the case's input. If no such line exists, simply output
+"will we ever know?" (without quotes).
+
+Example Input:
+--------------
+
+The cat goes meow
+The dog goes woof woof
+The fox goes ring a ding ding
+The cow goes moo
+What does the fox say?
+The little duck goes quack
+The big elephant goes toot
+What does the fox say?
+
+Example Output:
+---------------
+
+ring a ding ding
+will we ever know?
