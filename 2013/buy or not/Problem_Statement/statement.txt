@@ -6,15 +6,15 @@ your house so you can install it in your living room and relax watching
 Adventure Time. However you are unsure if you could pass the television through
 the corridors of your house all the way to your living room.
 
-You are a ver rich person an live in a big house with a lot of corridors. Each
-corridor has a certain width. You can asume that the lenght and height are big
+You are a very rich person and live in a big house with a lot of corridors. Each
+corridor has a certain width. You can asume that the length and height are big
 enough for any television to fit inside. Each corridor is connected to the
 next with a 90° angle (either positive or negative) and the corridors do not
 collapse into a circuit.
 
-Given the widths of consecutive corridors and the width of television you are
+Given the widths of consecutive corridors and the width of the television you are
 about to buy, you should decide if the television fits through the corridors or
-not. If it fist, you should buy it. If it doesn't fit, there is really no point
+not. If it fits, you should buy it. If it doesn't fit, there is really no point
 buying it.
 
 Input:
