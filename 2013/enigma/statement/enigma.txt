@@ -1,0 +1,54 @@
+>Name: Enigma
+
+>Title: Enigma
+
+>Statement:
+Shortest problem statement ever:
+You have a sequence V of size N and Q queries. Each query ha a sequence W. For
+each query you have to say if W is a contiguous subsequence of V.
+
+>Input format:
+You have T test cases. The first part of the input is the sequence V. The first
+line contains an integer N, and the next line contains N space-separated
+integers (Vi). The next line contains an integer Q, which is the number of
+queries for this test case. Q lines follow: each query has two lines of input,
+the first one corresponds to some integer S (the size of W), and the next line
+has S space separated integers (Wi).
+
+* 0 < T < 10
+* 0 < N <= 10 ^ 5
+* 0 < Vi <= 10 ^ 9
+* 0 < Q <= 100
+* 0 < S < 10 ^ 4
+* 0 < Wi < 10 ^ 9
+
+>Output format:
+Output one single line with the number of the current test case (starting at 1)
+and then for each query of the test case, print a single line "YES" (without
+quotes) if the sequence of that query is a subsequence of V, otherwise print
+"NO" (without quotes.)
+
+>Sample input:
+2
+1 5 4 2
+3
+1 5 4
+1 4
+2 4 5
+1 2 3 4 5 7 6
+1
+1 2 3 4 5 6
+
+
+>Sample output:
+Case #1:
+YES
+NO
+NO
+Case #2:
+NO
+
+Explanation of the first test case:
+1 5 4 are the first three elements of the sequence.
+1 4 is not a (contiguous) subsquence of V.
+2 4 5 is not a contiguos subsequence of V (from left to right.)
