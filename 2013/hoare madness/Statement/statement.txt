@@ -1,0 +1,95 @@
+Hoare Madness:
+==============
+
+You are asked to implement an automatic verifier of the correctness of a given
+program. A triple {Precondition} Program {Postcondition}, also known as a
+Hoare triple, is considered correct if begining at any state that satisfies the
+precondition and executing the program, the postcondition is ultimately satisfied.
+For example, the Hoare triple {x >= 5} x := x * 2 {x >= 10} is correct for all
+posible values of x, however the Hoare triple {x >= 5 } x := x * 2 {x > 10} is
+not correct, for when x is 5, then after executing the programa x would be 10,
+wich is not greater than 10.
+
+You will be given a program with the following concrete sintax:
+
+Program := { Condition } StatementList { Condition }
+
+Condition := Condition , Condition   // Conjunction
+	  |  Expression < Expression   // Less than.
+          |  Expression > Expression   // Greater than.
+          |  Expression <= Expression   // Less or equal than.
+          |  Expression >= Expression   // Greater or equal than
+          |  Expression = Expression    // Equal
+          |  Expression != Expression   // Not equal
+
+StatmentList := Statement ; StatementList
+             |  Statement
+
+Statement := Variable := Expresion   // Assignment.
+
+Expression := Value + Value   // Adition.
+           |  Value - Value   // Substraction.
+           |  Value * Value   // Multiplication.
+           |  Value / Value   // Integer Division.
+           |  Value
+
+Value := Variable
+      |  Number
+
+Variable := x
+         |  y
+         |  z
+
+Note that the conditions do not have disyuntions or negations. However they
+do have conjuctions, meaning that coth sub-conditions must be satisfied. Also
+note that every expression is forceably a binary operation of values, or a
+single value. These values can be either literal numbers or variables. Only
+number from 0 to 100 will be valid for literals, and also as the possible range
+of values for variables. Finally note that the program can only have three
+variables: x, y and z.
+
+You can assume that there will be at most 20 statements in the statement list.
+If at any point the evaluation of an expresion results in an invalid value, you
+can assume the program was incorrect. If the evaluation of any part of the
+postconidition results in an invalid value, you can also assume the program
+incorrect.
+
+Input:
+------
+
+The first line of input will contain a single integer T, 1<=T<=10, the number
+of test cases. T test cases follow. Each test case will be a program (hoare
+triple) following the sintax described above. Every test case will be precided
+by an empty line.
+
+Output:
+-------
+
+The output should consist of T lines, one for each test case. For each of the
+test cases you should output exactly on line containing "CORRECT" if the program
+is correct, or "INCORRECT" of the program was incorrect (quotes for clarity).
+
+Example Input:
+--------------
+
+3
+
+{ x <= 5 }
+x := x * 2
+{ x <= 10 }
+
+{ x <= 5 }
+x := x * 2
+{ x < 10 }
+
+{ x <= y + z , y <= 10 , z <= 20 }
+y := y * 2 ;
+z := z * 2 ;
+{ 2 * x <= y + z}
+
+Example Output:
+---------------
+
+CORRECT
+INCORRECT
+CORRECT
