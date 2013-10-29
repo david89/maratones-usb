@@ -1,0 +1,85 @@
+Jabba The Hut:
+==============
+
+For many years, Mos Eisly city has been the host of the mithical "Shoot Jabba
+The Hut" shooting tournament (this of course, many years after Jabba the Hut
+were killed by the hand of princess Leia), where big prizes are awarded to the
+very best in each category. Categories range from "Apprentice" to "Grand Master".
+Everyone pays sepcial attention to the "Grand Master" category, for it invites
+the best shooters in the entire Galaxy.
+
+This edition of "Shoot Jabba The Hut" has two very important competitors: Jaina
+Solo and Cade Skywalker, both descendants of captain Han Solo and Luke Skywalker
+respectively. Bot competitors hold an intense rivalry, not only to prove who the
+best Jedi is, but to impose a superior linage.
+
+The rules of the competition are as follows:
+
+   1. Each player has a single round, each consisting of several subrounds.
+   2. Each subround consists of N targets, each with value V_i.
+   3. The score fo each target is the targets value, multiplied by the target
+      multiplier.
+   4. At first, the multiplier is 1 and for each target hit, it increases by 1.
+   5. If a target is missed, the multiplier goes back to 1.
+
+However, the Hutts still rule the planet and organized crime is under their
+control. One of the many busineses they manage is gambling and it could not
+be the case that this tournament were free of bets.
+
+Watto, the old junk salesman is a fan of gambling and has contacts with the
+competition organizers. They have told him the arangement of targets that will
+be presented to each competitor and for how long. Besides, Watto know quite
+precisely the amount of targets that Jaina and Cade can hit each second.
+Needless to say, two Jedi master such as them never miss a shot. Watto is in
+great debt with the Hutts and will lose his beloved wings to them if he does not
+make a smart bet. So, he wants to know the greatest score that Jaina and Cade
+can achieve in order to make his decision.
+
+Input:
+------
+
+The first line of input will be a positive integer Q (Q <= 100), the number of
+test cases.
+
+Each test case will begin with a line with four integers N, M, J, C (1 <= N,
+M <= 100; 1 <= J, C, <= 20), where N is the amount of subrounds that Jaina will
+play, M the amount of subrounds Cade will play, J and C are the amount of
+targets that Jaina and Cade can hit per second, respectively.
+
+The following N+M lines will contains the information for Jaina's and Cade's
+subrounds. Each subround begins with two integers D and T (1 <= D <= 2000;
+1 <= T <= 20), where D is the amount of targets present in the subround and T
+is the time the subround lasts. Following are D integers, with the value of
+each target in that subround.
+
+Output:
+-------
+
+For each test case, output a line with the competitor that Watto whould bet on.
+In case of a tie, you should output "Watto, run!" (without quotes).
+
+Example Input:
+--------------
+
+2
+2 3 2 1
+5 4 5 2 7 6 1
+3 2 1 2 3
+3 1 1 2 3
+5 2 6 2 7 8 7
+2 4 5 4
+4 4 10 10
+4 4 1 2 3 4
+3 3 5 6 7
+2 2 8 9
+1 1 10
+4 4 1 2 3 4
+3 3 5 6 7
+2 2 8 9
+1 1 10
+
+Example Output:
+---------------
+
+Jaina
+Watto, run!
