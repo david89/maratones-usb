@@ -1,0 +1,63 @@
+Enjoy the Skillrex and Shut Up!:
+================================
+
+Skillrex has noticed somebody has decyphered the complexity of his masterpieces.
+That's too mainstream, and being mainstream is not something you could easily live
+with.
+
+Skillrex has come with a new plan: a new algorithm for creating his masterpieces.
+This is how it goes:
+
+    1. He choose a set of N notes.
+    2. He choose a number K of possible repetitions of each note
+    3. When he uses a note n_i, next note should be different
+    4. He builds a beat by choosing a sequence of K*N notes following the above 
+       rules
+
+A valid beat with 4 notes and 2 repetitions would be:
+
+14134232
+
+But this sequence would not:
+
+11234234
+
+Given N and K, can you determine how many possible beats does Skillrex have?
+
+Input:
+------
+
+The input will start with a number T, the number of taste cases (1 <= T <= 100).
+
+Each test case will contain a line containing two numbers N (1 <= N <= 10) and
+K (1 <= K <= 3).
+
+Output:
+-------
+
+For each test case output a line with the number of possible beats Skillrex could
+masterfully create modulo 1000007.
+
+Example Input:
+--------------
+
+7
+3 2
+2 2
+5 3
+10 3
+5 2
+6 2
+2 1
+
+Example Output:
+---------------
+
+30
+2
+606187
+854583
+39480
+631586
+2
+
