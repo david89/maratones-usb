@@ -1,68 +1,27 @@
 #!/usr/bin/python
 
-from random import randint, shuffle
+import inspect
+import os
+from random import randint
+import sys
 
-# First version of my custom test cases generator.
-class Generator(object):
-    SMALL_THRESHOLD = None
-
-    def __init__(self, small_threshold=100, *args, **kwargs):
-        self.SMALL_THRESHOLD = small_threshold
-
-    def _gen_unique_small(self, n, elems, *args, **kwargs):
-        shuffle(elems)
-
-        return elems[: n]
-
-    def _gen_unique_large(self, n, generator, *args, **kwargs):
-        ans = []
-        ap_function = ans.append
-        used = set([])
-        add_function = used.add
-        while (n > 0):
-            elem = generator()
-            if elem not in used:
-                add_function(elem)
-                ap_function(elem)
-
-                n -= 1
-
-        return ans
-
-    def _gen_sequence(self, n, generator):
-        return [generator() for _ in xrange(n)]
-
-    def gen_int_sequence(
-        self, n, min_elem, max_elem, unique=False, *args, **kwargs):
-
-        if (n < 0):
-            raise Exception('Bla')
-
-        if (min_elem > max_elem):
-            raise Exception('Bla')
-
-        if (n > (max_elem - min_elem + 1) and unique):
-            raise Exception('Bla')
-
-        if (not unique):
-            return self._gen_sequence(n, lambda: randint(min_elem, max_elem))
-
-        diff = max(0, n - (max_elem - min_elem + 1))
-        if (diff > self.SMALL_THRESHOLD):
-            return self._gen_unique_large(
-                n, lambda: randint(min_elem, max_elem), *args, **kwargs
-            )
-
-        return self._gen_unique_small(
-            n, range(min_elem, max_elem + 1), *args, **kwargs
+# FIXME: Move to conf.
+TOOLS_DIR = \
+    os.path.realpath(
+        os.path.abspath(
+            os.path.split(
+                inspect.getfile(
+                    inspect.currentframe()
+                )
+            )[0]
         )
+    )
+TOOLS_DIR = \
+    os.path.join('/'.join(TOOLS_DIR.split('/')[0: -4]), 'tools')
 
-    def generate_test_case(self, *args, **kwargs):
-        raise NotImplemented('Implement generate_test_case')
+sys.path.append(TOOLS_DIR)
 
-    def generate_test_cases(self, *args, **kwargs):
-        raise NotImplemented('Implement generate_test_cases')
-
+from generator_utils import Generator
 
 # TODO: Add methods for input/output files support.
 class ChocolatesGenerator(Generator):
@@ -82,6 +41,7 @@ class ChocolatesGenerator(Generator):
 
     def generate_test_cases(self, n, add_sample=True, *args, **kwargs):
         if (add_sample):
+            # FIXME: Clowntown.
             self._print_line('%d', *(n + 4, ))
             self._print_line('4 3')
             self._print_line('1 2 3')
@@ -104,4 +64,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
