@@ -38,7 +38,7 @@ class AnotherEnigmaGenerator(Generator):
         self, max_n, min_n, max_q, min_q, max_m, min_m):
 
         n = randint(min_n, max_n)
-        v = self.gen_int_sequence(n, 1, 10 ** 9)
+        v = self.gen_int_sequence(n, 1, 10 ** 4)
         q = randint(min_q, max_q)
 
         self._print_line('%d', *(n, ))
@@ -56,7 +56,7 @@ class AnotherEnigmaGenerator(Generator):
             else:
                 # Probably NO.
                 m = randint(min_m, max_m)
-                w = self.gen_int_sequence(m, 1, 10 ** 9)
+                w = self.gen_int_sequence(m, 1, 10 ** 4)
 
             self._print_line('%d', *(m, ))
             self._print_line(' '.join(map(lambda x: str(x), w)))
@@ -67,7 +67,7 @@ class AnotherEnigmaGenerator(Generator):
         else:
             # These are counter examples for KMP and naive SA.
             self._generate_test_case_helper(
-                10 ** 5, 5 * (10 ** 4), 2000, 2000, 5 * (10 ** 2), 1)
+                100000, 50000, 1000, 500, 1000, 500)
 
     def generate_test_cases(self, n, add_sample=True, *args, **kwargs):
         if (add_sample):
@@ -91,13 +91,12 @@ class AnotherEnigmaGenerator(Generator):
             self._print_line('%d', *(n, ))
 
         for _ in xrange(n):
-            # self.generate_test_case(*args, **kwargs)
             self.generate_test_case()
 
 
 def main():
     gen = AnotherEnigmaGenerator()
-    gen.generate_test_cases(20, add_sample=False)
+    gen.generate_test_cases(5)
 
 if __name__ == '__main__':
     main()

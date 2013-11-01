@@ -4,7 +4,7 @@
 using namespace std;
 
 const int MAXN = 100002;
-const int MAXM = 502;
+const int MAXM = 1002;
 int size;
 int seq[MAXN];
 int failure[MAXM];
@@ -51,26 +51,26 @@ bool KMP(int n) {
 int main() {
     int t;
 
-    cin >> t;
+    scanf("%d", &t);
     for (int tt = 1; tt <= t; tt++) {
-        cout << "Case #" << tt << ":" << endl;
+        printf("Case #%d:\n", tt);
 
-        cin >> size;
+        scanf("%d", &size);
 
         for (int i = 0; i < size; i++) {
-            cin >> seq[i];
+            scanf("%d", &seq[i]);
         }
 
         int q;
-        cin >> q;
+        scanf("%d", &q);
         for (int j = 0; j < q; j++) {
             int m;
-            cin >> m;
+            scanf("%d", &m);
             for (int k = 0; k < m; k++) {
-                cin >> query[k];
+                scanf("%d", &query[k]);
             }
 
-            cout << (KMP(m) ? "YES" : "NO") << endl;
+            printf("%s\n", (KMP(m) ? "YES" : "NO"));
         }
     }
     return 0;

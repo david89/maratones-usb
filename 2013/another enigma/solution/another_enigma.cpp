@@ -7,7 +7,7 @@
 using namespace std;
 
 const int MAXN = 100002;
-const int MAXM = 502;
+const int MAXM = 1002;
 int size; /**< Size of the seq + 1. */
 int h;
 int bucket[MAXN];
@@ -101,40 +101,33 @@ bool isSubsequence(It begin, It end) {
             }
         }
 
-        if (begin + l == end) {
-            return true;
-        }
-
-        if (seq[suffixes[k].id + l] <= *(begin + l)) {
+        if ((begin + l == end) || seq[suffixes[k].id + l] <= *(begin + l)) {
             i = k;
         } else if (seq[suffixes[k].id + l] > *(begin + l)) {
             j = k;
-        } else {
-            puts("OOPPPS");
         }
     }
 
-    // for (int l = 0; (begin + l) != end; l++) {
-    //     if (*(begin + l) != seq[suffixes[i].id + l]) {
-    //         return false;
-    //     }
-    // }
+    for (int l = 0; (begin + l) != end; l++) {
+        if (*(begin + l) != seq[suffixes[i].id + l]) {
+            return false;
+        }
+    }
 
-    // return true;
-    return false;
+    return true;
 }
 
 int main() {
     int t;
 
-    cin >> t;
+    scanf("%d", &t);
     for (int tt = 1; tt <= t; tt++) {
-        cout << "Case #" << tt << ":" << endl;
+        printf("Case #%d:\n", tt);
 
-        cin >> size;
+        scanf("%d", &size);
 
         for (int i = 0; i < size; i++) {
-            cin >> seq[i];
+            scanf("%d", &seq[i]);
         }
 
         seq[size] = 0;
@@ -142,15 +135,15 @@ int main() {
         suffixArray();
 
         int q;
-        cin >> q;
+        scanf("%d", &q);
         for (int j = 0; j < q; j++) {
             int m;
-            cin >> m;
+            scanf("%d", &m);
             for (int k = 0; k < m; k++) {
-                cin >> query[k];
+                scanf("%d", &query[k]);
             }
 
-            cout << (isSubsequence(query, query + m) ? "YES" : "NO") << endl;
+            printf("%s\n", (isSubsequence(query, query + m) ? "YES" : "NO"));
         }
     }
     return 0;

@@ -4,7 +4,7 @@
 
 >Statement:
 Shortest problem statement ever:
-You have a sequence V of size N and Q queries. Each query ha a sequence W. For
+You have a sequence V of size N and Q queries. Each query has a sequence W. For
 each query you have to say if W is a contiguous subsequence of V.
 
 >Input format:
@@ -15,12 +15,12 @@ queries for this test case. Q lines follow: each query has two lines of input,
 the first one corresponds to some integer S (the size of W), and the next line
 has S space separated integers (Wi).
 
-* 0 < T <= 20
+* 0 < T <= 5
 * 0 < N <= 10 ^ 5
-* 0 < Vi <= 10 ^ 9
-* 0 < Q <= 2000
-* 0 < S <= 500
-* 0 < Wi <= 10 ^ 9
+* 0 < Vi <= 10 ^ 4
+* 0 < Q <= 10 ^ 3
+* 0 < S <= 10 ^ 3
+* 0 < Wi <= 10 ^ 4
 
 >Output format:
 Output one single line with the number of the current test case (starting at 1)
