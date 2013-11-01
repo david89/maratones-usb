@@ -1,0 +1,66 @@
+Inline Elephant Toast
+=====================
+
+While on a safari trip in an African savannah you find N gray elephants looking
+a bit confused. Strangely, each elephant is holding a glass of champagne with
+its trunk. As soon as they see you approach, one of them shouts to you and asks
+for help.
+
+As it turns out, this group of big, gray and smart mammals is having a
+celebration because all of them advanced to the world finals of an important
+international programming competition. They want to make a toast: they will
+raise their glasses, clink them together with the other elephants, and drink.
+
+To make things a bit more interesting, however, they've decided to do this
+while standing in a straight line. First, the elephants will pair up in an
+arbitrary way and each pair of elephants will clink their glasses together (all
+at the same time). Then, they will choose another way of pairing up and clink
+their glasses again. They will continue doing this until they've exhausted all
+possible ways of pairing up.
+
+But not all ways of pairing up are possible. If the trunks of the elephants
+cross paths in the air they might become entangled, so they need to avoid that.
+For example, suppose there are four elephants aligned in this way:
+
+            Dumbo    Jumbo    Catty    Giddy
+
+It's perfectly fine if Dumbo pairs up with Jumbo and Catty pairs up with Giddy
+at the same time. Dumbo could also pair up with Giddy while Jumbo pairs up with
+Catty. But if Dumbo paired up with Catty and Jumbo paired up with Giddy, their
+trunks would cross in the air, so that's not a possible way to pair up.
+
+Despite being very good programmers, they have no idea how to count the number
+of possible ways to pair up. That's why they're confused and need you to solve
+the problem for them.
+
+Note: this breed of elephants has very long trunks, so even the elephants at
+both ends of the line can reach each other if they decide to clink their glasses.
+
+Input:
+------
+
+The input will contain several test cases. Each test case consists of an even
+number N >= 2 in its own line.
+
+A single 0 will follow the last test case.
+
+Output:
+-------
+
+For each test case output the number of ways the N elephants can pair up and
+clink their glasses together without getting their trunks entangled.
+
+Example Input:
+--------------
+
+2
+4
+6
+0
+
+Example Output:
+---------------
+
+1
+2
+5
