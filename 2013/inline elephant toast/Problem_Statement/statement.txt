@@ -40,9 +40,9 @@ Input:
 ------
 
 The input will contain several test cases. Each test case consists of an even
-number N >= 2 in its own line.
+number 2 <= N <= 50 in its own line.
 
-A single 0 will follow the last test case.
+A single 0 in its own line will follow the last test case.
 
 Output:
 -------
