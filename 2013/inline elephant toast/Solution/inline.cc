@@ -3,10 +3,10 @@
 
 using namespace std;
 
-long C[60][60];
-long blank;
+long long C[60][60];
+long long blank;
 
-long comb(int n, int k)
+long long comb(int n, int k)
 {
     if(k==0)
         return 1;
