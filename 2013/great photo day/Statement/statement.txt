@@ -1,0 +1,71 @@
+Great Photo Day
+===============
+
+It's the most expected day at your former High School! The great
+photo day!.
+
+In this memorable day a group picture of all the students belonging
+to the same class is taken and published in the school's yearbook.
+For this end the kids from each class are organized in a single row
+sorted in ascending order by height, so afterwards the
+photographer can take care of immortalizing the moment.
+
+In ancient times there where very few classes in the school, so a picture
+was taken for each class and all of them where published in the
+yearbook. However, since the amount of classes has exponentially grown due
+to city overpopulation, the school's director has decided
+to reduce the amount of pictures to be taken by overlaying rows:
+two rows of students can be overlaid if when sorted and placed together
+none of the students in the front row completely blocks any of the students
+in the rear row. Mathematically, if the heights of the students in row a and b, when
+sorted in ascending order, are {a_1, a_2, ..., a_m} and {b_1,b_2,...,b_m}, then
+row a can be overlaid by row b if a_k > b_k for all k from 1 to m.
+
+Since someone told your former School's director that you are a very clever
+computer scientist that aims to attend the ACM-ICPC world finals,
+he decided to hire you for building a program that given the specifications
+of all students in all the School's classes, computes the minimum amount
+of pictures that can be taken for including all classes while allowing
+overlaying.
+
+Input:
+------
+
+The input will consist of several test cases. The first line of
+each test case will consist of two numbers, n, and m (2 <= n,m <= 100);
+the number of classes in the school and the number of students per class.
+Each of the following n lines will contain m numbers separated by spaces, each
+describing the height  h of one of the students in the class (0 <= h <= 1000).
+The final test case will have n = m = 0 and should not be processed.
+
+Output:
+-------
+
+For each test case print a single line: the minimum amount of pictures
+that can be taken for including all classes while allowing overlaying.
+
+Sample Input:
+-------------
+
+3 4
+1 2 3 4
+2 3 4 6
+7 5 4 3
+3 3
+5 5 5
+4 4 6
+4 4 5
+5 2
+1 1
+2 2
+4 5
+4 4
+4 1
+0 0
+
+Sample Output:
+--------------
+1
+3
+2
+
