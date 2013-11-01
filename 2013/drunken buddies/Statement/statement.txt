@@ -1,0 +1,62 @@
+>Name: Drunken Buddies
+
+>Title: Drunken Buddies:
+
+>Statement:
+
+Scrappy and Coco are best friends. Recently, Coco has received a new hair cut and they have decided to drink until the sun goes up!.
+
+After the tremendous party, Scrappy and Coco are so drunk that they start to travel in the subway system (wich have a form of a tree) in random order, 
+but after a while they
+are back in central station. They traveled in the following way: 
+First, start at the central station. 
+Second, pick a subway line at random and jump aboard the subway train. 
+Thrid, in the station, they pick one of the subway lines they have not yet travelled on. If there is none left to explore at 
+their current station, they take the subway line back on which they first came to the  current station, 
+until they eventually have travelled along all of the lines twice, 
+once for each direction. 
+Fourth, they are back at the central station.
+
+Scrappy and Coco decided to travel in separated ways and record the "goes" and the "backs" in the following way: GGBGGBBBGBGGBGBB. 
+G means that they travel away from the central station, and B means that they travel back to the central station. 
+This travel was done by Scrappy and represents the following diagram:
+
+xxxxxxxxxxxxx
+
+But Coco records this: GBGGBGBBGGBGGBBB this secuence represents the same trip, just in another order.
+
+Scrappy and Coco ask for your help to write a program that given two travel sequences determine if the sequence can represent
+the same subway system. 
+
+
+>Input Format:
+
+On the first line of input is a single positive integer n, telling the number of test scenarios to follow.
+
+Each test scenario consists of two lines, each containing a string of the characters 'G' and 'B' 
+of length at most 3000, both describing a correct exploration tour of a subway tree system.
+
+>Output Format:
+
+The output should contain one lines, that show 
+ the text "same drunken trip." if the two strings may represent the same trip 
+in the subway system, or the text "different drunken trip." if the trips cannot be the same.
+
+
+>Sample Input:
+2
+GGBGGBBBGBGGBGBB
+GBGGGBBGBBGGBGBB
+GBGGBGBBGGBGGBBB
+GGBBGGGBBBGBGBGB
+
+>Sample Output:
+
+Case #1
+same drunken trip.
+Case #2
+different drunken trip.
+
+>Category: Graphs-Search
+
+>Dificulty: Medium.
