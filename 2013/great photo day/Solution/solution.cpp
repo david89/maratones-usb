@@ -26,8 +26,8 @@ using namespace::std;
  */
 
 //..........Params begin.........
-#define MAXN 2001
-#define MAXU 1001
+#define MAXN 201
+#define MAXU 101
 #define INF 1<<28
 
 vector< vector<int> > graph;
@@ -86,7 +86,7 @@ inline int hopcroft_karp(){
 
 //...
 
-int clss[1001][1001];
+int clss[101][101];
 
 int main(){
     int cases,m;
@@ -97,9 +97,6 @@ int main(){
             for(int j=0;j<m;j++)
                 scanf("%d",&clss[i][j]);
             sort(clss[i],clss[i]+m);
-            for(int j=0;j<m-1;j++)
-                if(clss[i][j]>clss[i][j+1])
-                    printf("!!!!!!!!!!!!!!!!!1\n");
         }
 
         graph = vector< vector<int> >(u+1,vector<int>());
